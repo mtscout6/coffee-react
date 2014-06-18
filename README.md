@@ -94,4 +94,19 @@ Component = require('./component.cjsx')
 
 ```
 
+#### Load .cjsx files with [Karma](http://karma-runner.github.io/)
+Add a preprocessor clause to the karma conf file, and it will automatically transorm the .cjsx files.
+
+```
+module.exports = function(config) {
+  config.set({
+    preprocessors: {
+      '**/*.cjsx': [ 'cjsx' ]
+    },
+
+    // the rest of the config should be here
+  })
+}
+```
+
 If you just want to transform CJSX markup into valid Coffeescript code as part of your existing build process see [coffee-react-transform](https://github.com/jsdf/coffee-react-transform), which is the main parser/transformer package.
