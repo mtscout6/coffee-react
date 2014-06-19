@@ -94,4 +94,19 @@ Component = require('./component.cjsx')
 
 ```
 
+#### [Mimosa](http://mimosa.io/)
+
+Add `'cjsx'` to your list of modules.  That's all!  Mimosa will install the module for you when you start `mimosa watch` or `mimosa build`.
+
+In your mimosa config:
+```javascript
+cjsx: {
+  lib: undefined,
+  extensions: ["cjsx"]
+}
+```
+
+* `lib`: You may want to use this module but may not be ready to use the latest version of `coffee-react`. Using the `lib` property you can provide a specific version of `coffee-react` if the one being used by this module isn't to your liking. To provide a specific version, you must have it `npm install`ed into your project and then provide it to `lib`. For instance: `lib: require("coffee-react")`
+* `extensions`: an array of strings, the extensions of your Coffeescript React/JSX files.
+
 If you just want to transform CJSX markup into valid Coffeescript code as part of your existing build process see [coffee-react-transform](https://github.com/jsdf/coffee-react-transform), which is the main parser/transformer package.
