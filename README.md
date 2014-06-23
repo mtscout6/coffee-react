@@ -94,4 +94,8 @@ Component = require('./component.cjsx')
 
 ```
 
+### Vim plugin
+
+There is a vim plugin available for syntax highlighting [here](https://github.com/mtscout6/vim-cjsx)
+
 If you just want to transform CJSX markup into valid Coffeescript code as part of your existing build process see [coffee-react-transform](https://github.com/jsdf/coffee-react-transform), which is the main parser/transformer package.
